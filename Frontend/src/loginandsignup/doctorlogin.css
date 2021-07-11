@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+/* * {
+	box-sizing: border-box;
+} */
+
+.doctormaindiv{
+	background: #f6f5f7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+	margin: -20px 0 50px;
+	margin-top: 3%;
+}
+
+.doctorh1{
+	font-weight: bold;
+	margin: 0;
+}
+
+
+
+
+
+.doctorbutton {
+	border-radius: 20px;
+	border: 1px solid #4154f1;
+	background-color: #4154f1;
+	/* background-color: #FF4B2B; */
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+  margin: 10px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+.doctorbutton:active {
+	transform: scale(0.95);
+}
+
+.doctorbutton:focus {
+	outline: none;
+}
+
+.doctorbutton.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
+.doctorform{
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}
+
+.doctorinput{
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+}
+
+.doctorcontainer {
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+}
+
+.form-doctorcontainer {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+}
+
+.sign-in-doctorcontainer {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+
+.doctorcontainer.right-panel-active .sign-in-doctorcontainer {
+	transform: translateX(100%);
+}
+
+.sign-up-doctorcontainer {
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	z-index: 1;
+}
+
+.doctorcontainer.right-panel-active .sign-up-doctorcontainer {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+}
+
+
+
+.doctoroverlay-doctorcontainer {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+}
+
+.doctorcontainer.right-panel-active .doctoroverlay-doctorcontainer{
+	transform: translateX(-100%);
+}
+
+.doctoroverlay {
+	background: #4154f1;
+	background: -webkit-linear-gradient(to right, #4154f1, #4153f1e0);
+	background: linear-gradient(to right, #4154f1, #4153f1e7);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+  	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.doctorcontainer.right-panel-active .doctoroverlay {
+  	transform: translateX(50%);
+}
+
+.doctoroverlay-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.doctoroverlay-left {
+	transform: translateX(-20%);
+}
+
+.doctorcontainer.right-panel-active .doctoroverlay-left {
+	transform: translateX(0);
+}
+
+.doctoroverlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+.doctorcontainer.right-panel-active .doctoroverlay-right {
+	transform: translateX(20%);
+}
+
+.social-doctorcontainer {
+	margin: 20px 0;
+}
+
+.social-doctorcontainer a {
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+}
+
+.doctorimagecontainer{
+  width: 300px;
+  position:relative;
+  top: 80px;
+  right: 30px;
+  
+} 
+
+
+
+.doctorimagediv{
+  text-align: right;
+  margin: 0 auto;
+  
+}
+
+.doctorimagecontainersignup{
+	width: 300px;
+	position:relative;
+  top: 40px;
+  right: 30px;
+}
+
+
+.signupprivacy{
+	
+	position:relative;
+  top: 130px;
+
+}
